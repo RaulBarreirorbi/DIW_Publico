@@ -61,12 +61,18 @@ li {
 
 /* selectores de atributos */
 /* todos los enlaces que están dentro de un párrafo y empiezan por # color blueviolet*/
-
+p a[href^="#"]{
+  color: blueviolet;
+}
 
 
 /* Todos los enlaces que apunten a la cabeera, posicionalos con flex justificación
 en el eje principal al final.*/
 
+a[href="#cabecera"]{
+  display: flex;
+  justify-content: flex-end;
+}
 
 /* selector de pseudoclases */
 /* seleccionamos los hermanos impares de tipo section para que
@@ -90,6 +96,11 @@ Para todos los h2 hijos directos de un section:
 - interlineado 1.6
 */
 
+section p, section li{
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 /* todos los h3 de un section:
 - tamaño fuente 1.5rem
 - borde 2px punteado verde.
@@ -109,7 +120,9 @@ pre {
 /* para los párrafos con clase subtitulo que sean hermano de un h4:
 - borde superior de 1px punteado color #666*/
 
-
+h4 ~ p.subtitulo{
+  border-top: 1px dotted #666;
+}
 
 /* selectores hermanos adyacentes */
 /* para los ul que están justo después de un h3:
